@@ -4,6 +4,26 @@ public class LineComp {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparison Computation Program");
+		
+		System.out.print("Enter End point of Line1:");
+		double line1 = LengthCal();
+		
+		System.out.print("Enter End point of Line2:");
+		double line2 = LengthCal();
+		
+		if (line1==line2) {
+			System.out.print("Lines are Equal");
+		}
+		else if(line1>line2) {
+			System.out.print("First line is Greater");
+		}
+		else {
+			System.out.print("Second line is Greater");
+		}
+
+	}
+	
+	static double LengthCal() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Point1's x=");
 		int x1=  sc.nextInt();
@@ -13,12 +33,10 @@ public class LineComp {
 		int x2=  sc.nextInt();
 		System.out.println("Enter Point2's y=");
 		int y2=  sc.nextInt();
-		
+	sc.close();	
 		Double Length =  Math.sqrt(((x2-x1)^2) + ((y2-y1)^2));
 		
-		System.out.printf("Total length of line is", Length );
-	
+		return Length;
 	}
-	
 
 }
